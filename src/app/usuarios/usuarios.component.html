@@ -1,1 +1,27 @@
-<p>usuarios works!</p>
+<div class="contenedor">
+  <h2>Lista de usuarios</h2>
+
+  @if (cargando()) {
+    <p class="mensaje carga">Cargando usuarios...</p>
+  }
+
+  @if (error()) {
+    <p class="mensaje error">{{ error() }}</p>
+    <button (click)="cargarUsuarios()">Reintentar</button>
+  }
+
+  @if (!cargando() && !error()) {
+    <div class="tarjetas">
+      @for (u of usuarios(); track u.id) {
+        <div class="tarjeta">
+          <span class="id">ID: {{ u.id }}</span>
+          <h3>{{ u.name }}</h3>
+          <p>{{ u.email }}</p>
+          <p>{{ u.phone }}</p>
+        </div>
+      } @empty {
+        <p>No hay usuarios para mostrar.</p>
+      }
+    </div>
+  }
+</div>

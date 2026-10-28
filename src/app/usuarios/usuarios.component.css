@@ -1,0 +1,71 @@
+.contenedor {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+  font-family: Poppins, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.tarjeta {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #89026511;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+  margin: 8px 0;
+  color: #cf3ccc;
+}
+
+.tarjeta p {
+  margin: 4px 0;
+  color: #4a4a4abd;
+  word-break: break-all;
+}
+
+.id {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #c319d2;
+  color: white;
+  font-size: 12px;
+}
+
+.mensaje {
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.carga {
+  background: #5200443b;
+  color: #141114;
+}
+
+.error {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+button {
+  display: block;
+  margin: 12px auto;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+}
